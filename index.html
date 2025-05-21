@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Clear Cleaning Services</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Glassmorphism styles */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .navglass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .glass-dark {
+            background: rgba(13, 16, 23, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* Custom animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Hide scrollbar but allow scrolling */
+        body {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        body::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Background elements -->
+    <div class="fixed w-full h-full overflow-hidden -z-10">
+        <div class="absolute top-10 left-10 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute top-40 right-20 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-40 left-1/3 w-80 h-80 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navglass px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600 flex items-center">
+                <span class="text-3xl mr-2">✨</span> Logo
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <select name="" id="" class="text-blue-800 hover:text-blue-600 transition-colors">
+                    <option value="">Services</option>
+                    <option value="residential"><a href="#services">House Cleaning</a></option>
+                    <option value="commercial"><a href="#services">Office Cleaning</a></option>
+                    <option value="window"><a href="#services">Kitchen Cleaning</a></option>
+                    <option value="upholstery"><a href="#services">Window Cleaning</a></option>
+                    <option value="deep"><a href="#services">Room Cleaning Services</a></option>
+                    <option value="post-construction"><a href="#services">Deep Cleaning Services</a></option>
+                    <option value="post-construction"><a href="#services">Laundry And Ironing</a></option>
+                    <option value="post-construction"><a href="#services">Party Helpers/Cleaning</a></option>
+                    <option value="post-construction"><a href="#services">Babysitting</a></option>
+                </select>
+                <a href="#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#testimonials" class="text-blue-800 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-blue-800 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white bg-opacity-90 absolute top-16 left-0 w-full rounded-b-lg shadow-lg z-50" id="mobile-menu">
+            <div class="flex flex-col space-y-4 p-4">
+                <select name="" id="" class="text-blue-800 hover:text-blue-600 transition-colors">
+                    <option value="">Services</option>
+                    <option value="residential"><a href="#services">House Cleaning</a></option>
+                    <option value="commercial"><a href="#services">Office Cleaning</a></option>
+                    <option value="window"><a href="#services">Kitchen Cleaning</a></option>
+                    <option value="upholstery"><a href="#services">Window Cleaning</a></option>
+                    <option value="deep"><a href="#services">Room Cleaning Services</a></option>
+                    <option value="post-construction"><a href="#services">Deep Cleaning Services</a></option>
+                    <option value="post-construction"><a href="#services">Laundry And Ironing</a></option>
+                    <option value="post-construction"><a href="#services">Party Helpers/Cleaning</a></option>
+                    <option value="post-construction"><a href="#services">Babysitting</a></option>
+                </select>
+                <a href="#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#testimonials" class="text-blue-800 hover:text-blue-600 transition-colors">Testimonials</a>
+                <a href="#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 px-4 md:pt-32 md:pb-24 relative">
+        <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 leading-tight mb-4 text-shadow">
+                    FAST NEW SERVICES<br>AND HOSPITALITY
+                </h1>
+                <p class="text-lg md:text-xl text-blue-700 mb-8 max-w-lg">
+                    Professional cleaning services for homes and businesses. Experience the Crystal Clear difference today.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="glass-dark text-white py-3 px-6 rounded-lg transition-all hover:shadow-lg text-center">
+                        Book Now
+                    </a>
+                    <a href="#services" class="glass text-blue-800 py-3 px-6 rounded-lg transition-all hover:shadow-lg text-center">
+                        Our Services
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn.prod.website-files.com/662a9a0b1860cf22db41bd69/662ff7377dec6027e008a4ac_Professional%20cleaning%20service%20(1).webp" alt="Cleaning Service" class="w-full max-w-md float">
+            </div>
+        </div>
+        
+        <!-- Scrolling Wave -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden h-12">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+                <path fill="#ffffff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,149.3C384,149,480,139,576,144C672,149,768,171,864,165.3C960,160,1056,128,1152,117.3C1248,107,1344,117,1392,122.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Our Services</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🏠</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">House Cleaning</h3>
+                    <p class="text-blue-700">Comprehensive home cleaning with attention to detail. We make your living space spotless from floor to ceiling.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🏢</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Office Cleaning</h3>
+                    <p class="text-blue-700">Professional cleaning solutions for offices and commercial spaces. Maintain a clean environment for your business.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🪟</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Window Cleaning</h3>
+                    <p class="text-blue-700">Crystal clear windows inside and out. We use professional equipment for streak-free results.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🍳</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Kitchen Cleaning</h3>
+                    <p class="text-blue-700">Deep cleaning for your kitchen, including appliances, surfaces, and hard-to-reach areas. Enjoy a sparkling clean cooking space.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🧽</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Deep Cleaning Services</h3>
+                    <p class="text-blue-700">Thorough cleaning of all areas including hard-to-reach spots. Perfect for seasonal cleaning or special occasions.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="glass p-6 transition-all hover:shadow-xl">
+                    <div class="text-4xl mb-4 text-blue-500">🛏️</div>
+                    <h3 class="text-xl font-semibold text-blue-900 mb-2">Room Cleaning Services</h3>
+                    <p class="text-blue-700">Detailed cleaning for bedrooms and living spaces. Freshen up your rooms for a healthier environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-blue-50 relative">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="/api/placeholder/500/400" alt="About Us" class="rounded-lg shadow-xl max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">About Crystal Clear</h2>
+                    <p class="text-blue-700 mb-4">
+                        With over 10 years of experience in the cleaning industry, Crystal Clear has built a reputation for excellence and reliability.
+                    </p>
+                    <p class="text-blue-700 mb-4">
+                        Our team consists of trained professionals who take pride in their work. We use eco-friendly cleaning products and state-of-the-art equipment to ensure the best results.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="glass p-4 text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                            <div class="text-blue-700">Happy Clients</div>
+                        </div>
+                        <div class="glass p-4 text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">10+</div>
+                            <div class="text-blue-700">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">What Our Clients Say</h2>
+            
+            <div class="testimonial-slider overflow-hidden relative">
+                <div class="testimonial-track flex transition-transform duration-500 ease-in-out">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="glass max-w-2xl mx-auto p-6 md:p-8">
+                            <div class="text-4xl text-blue-400 mb-4">"</div>
+                            <p class="text-blue-700 mb-4">Crystal Clear transformed my home! Their attention to detail is amazing, and they were so thorough. I've tried other cleaning services, but none compare to the quality of work provided by this team.</p>
+                            <div class="flex items-center mt-4">
+                                <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">JS</div>
+                                <div class="ml-3">
+                                    <div class="font-medium text-blue-900">Jessica Smith</div>
+                                    <div class="text-sm text-blue-600">Homeowner</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="glass max-w-2xl mx-auto p-6 md:p-8">
+                            <div class="text-4xl text-blue-400 mb-4">"</div>
+                            <p class="text-blue-700 mb-4">As a business owner, I need reliable cleaning services that don't disrupt our operations. Crystal Clear has been the perfect solution. They work around our schedule and leave our office spotless every time.</p>
+                            <div class="flex items-center mt-4">
+                                <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">MC</div>
+                                <div class="ml-3">
+                                    <div class="font-medium text-blue-900">Michael Chen</div>
+                                    <div class="text-sm text-blue-600">Business Owner</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-slide min-w-full px-4">
+                        <div class="glass max-w-2xl mx-auto p-6 md:p-8">
+                            <div class="text-4xl text-blue-400 mb-4">"</div>
+                            <p class="text-blue-700 mb-4">I was amazed by how Crystal Clear handled our post-renovation cleanup. There was dust everywhere, but they managed to get everything pristine in a single day. Highly recommend their services!</p>
+                            <div class="flex items-center mt-4">
+                                <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold">AJ</div>
+                                <div class="ml-3">
+                                    <div class="font-medium text-blue-900">Amanda Johnson</div>
+                                    <div class="text-sm text-blue-600">Homeowner</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slider Controls -->
+                <button class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 focus:outline-none prev-button">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <button class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 focus:outline-none next-button">
+                    <svg class="w-6 h-6 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                
+                <!-- Slider Indicators -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="w-3 h-3 rounded-full bg-blue-300 focus:outline-none indicator active" data-index="0"></button>
+                    <button class="w-3 h-3 rounded-full bg-blue-200 focus:outline-none indicator" data-index="1"></button>
+                    <button class="w-3 h-3 rounded-full bg-blue-200 focus:outline-none indicator" data-index="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-4 bg-blue-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Our Pricing Plans</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="glass p-8 transition-all hover:shadow-xl relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Basic Clean</h3>
+                    <div class="text-4xl font-bold text-blue-800 mb-2">$99<span class="text-lg text-blue-600 font-normal">/session</span></div>
+                    <p class="text-blue-700 mb-6">Perfect for regular maintenance cleaning</p>
+                    
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            General dusting and vacuuming
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Bathroom cleaning
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Kitchen surfaces
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Floor cleaning
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full py-3 px-6 bg-blue-100 text-blue-800 text-center rounded-lg transition-all hover:bg-blue-200">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Standard Plan -->
+                <div class="glass-dark p-8 transition-all hover:shadow-xl relative overflow-hidden">
+                    <div class="absolute top-3 right-3 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        Popular
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Standard Clean</h3>
+                    <div class="text-4xl font-bold text-white mb-2">$149<span class="text-lg text-blue-200 font-normal">/session</span></div>
+                    <p class="text-blue-200 mb-6">Comprehensive cleaning for the entire home</p>
+                    
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-blue-100">
+                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            All Basic Clean services
+                        </li>
+                        <li class="flex items-center text-blue-100">
+                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Deep cleaning of bathrooms
+                        </li>
+                        <li class="flex items-center text-blue-100">
+                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Interior window cleaning
+                        </li>
+                        <li class="flex items-center text-blue-100">
+                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Appliance exterior cleaning
+                        </li>
+                        <li class="flex items-center text-blue-100">
+                            <svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Baseboards and door frames
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full py-3 px-6 bg-blue-600 text-white text-center rounded-lg transition-all hover:bg-blue-700">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="glass p-8 transition-all hover:shadow-xl relative overflow-hidden">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4">Deep Clean</h3>
+                    <div class="text-4xl font-bold text-blue-800 mb-2">$249<span class="text-lg text-blue-600 font-normal">/session</span></div>
+                    <p class="text-blue-700 mb-6">Ultimate cleaning experience for your home</p>
+                    
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            All Standard Clean services
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Carpet and upholstery cleaning
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Exterior window cleaning
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Inside cabinets and drawers
+                        </li>
+                        <li class="flex items-center text-blue-700">
+                            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Light fixtures and fans
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="block w-full py-3 px-6 bg-blue-100 text-blue-800 text-center rounded-lg transition-all hover:bg-blue-200">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Contact Us</h2>
+            
+            <div class="max-w-2xl mx-auto">
+                <form action="#" method="POST" class="glass p-8 rounded-lg shadow-lg">
+                    <div class="mb-6">
+                        <label for="name" class="block text-blue-900 font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block text-blue-900 font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-blue-900 font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 px-6 bg-blue-600 text-white font-bold rounded-lg transition-all hover:bg-blue-700">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-blue-900 text-white text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2023 Crystal Clear Cleaning Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Mobile menu toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Optional: Close menu when a link or select is used
+    });
+    </script>
+</body>
+</html>
