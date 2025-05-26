@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babysitting Services | FastNew</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .navglass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navglass px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-blue-600 flex items-center">
+                <span class="text-3xl mr-2">✨</span> Home
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="../index.html#services" class="text-blue-800 hover:text-blue-600 transition-colors">Services</a>
+                <a href="../index.html#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="../index.html#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="../index.html#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-12 px-4 md:pt-32 md:pb-20 relative">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-4 text-shadow">
+                    Babysitting Services
+                </h1>
+                <p class="text-lg md:text-xl text-blue-700 mb-8 max-w-lg">
+                    Trust our experienced babysitters to care for your children in a safe, nurturing, and fun environment—day or night, for any occasion.
+                </p>
+                <a href="../index.html#contact" class="glass-dark text-white py-3 px-6 rounded-lg transition-all hover:shadow-lg text-center">
+                    Book Now
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=600&q=80" alt="Babysitting" class="w-full max-w-md rounded-lg shadow-xl">
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Our Babysitting Services</h2>
+            <div class="max-w-2xl mx-auto text-blue-700 text-lg leading-relaxed">
+                <p class="mb-6">Our babysitting service provides safe, nurturing, and engaging care for your children, whether you need help during the day, evening, or overnight. Our experienced babysitters are trained to handle children of all ages, including infants, toddlers, and those with special needs.</p>
+                <p class="mb-6">We offer flexible babysitting for any occasion—at home, for events, or on short notice. Our team can assist with playtime, meals, naps, bedtime routines, and even homework help. We prioritize your child's safety and happiness, giving you peace of mind while you're away.</p>
+                <p class="mb-6">Let us know your family's unique needs, and we'll match you with a caring, responsible babysitter who will treat your children like their own.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-blue-900 text-white text-center mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 FastNew Cleaning Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

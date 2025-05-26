@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Helpers & Cleaning Services | FastNew</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .navglass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navglass px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-blue-600 flex items-center">
+                <span class="text-3xl mr-2">✨</span> Home
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="../index.html#services" class="text-blue-800 hover:text-blue-600 transition-colors">Services</a>
+                <a href="../index.html#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="../index.html#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="../index.html#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-12 px-4 md:pt-32 md:pb-20 relative">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
+                <h1 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-4 text-shadow">
+                    Party Helpers & Cleaning Services
+                </h1>
+                <p class="text-lg md:text-xl text-blue-700 mb-8 max-w-lg">
+                    Make your event stress-free! Our party helpers assist with setup, serving, and cleanup, so you can enjoy your celebration while we handle the mess.
+                </p>
+                <a href="../index.html#contact" class="glass-dark text-white py-3 px-6 rounded-lg transition-all hover:shadow-lg text-center">
+                    Book Now
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Party Helpers and Cleaning" class="w-full max-w-md rounded-lg shadow-xl">
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 px-4 bg-white">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">Our Party Helpers & Cleaning Services</h2>
+            <div class="glass p-8">
+                <p class="text-lg text-blue-800 mb-6">FastNew's party helpers and cleaning services are designed to make your event seamless and enjoyable. Our experienced team assists with every aspect of your gathering, from setup to cleanup, so you can focus on your guests and the celebration. We handle the details, big and small, to ensure your venue is organized, welcoming, and spotless before, during, and after your event.</p>
+                <ul class="list-disc pl-6 text-blue-700 space-y-2">
+                    <li>Event setup: arranging tables, chairs, decorations, and supplies to create the perfect party atmosphere.</li>
+                    <li>Serving and guest assistance: professional helpers to serve food and drinks, assist guests, and keep the event running smoothly.</li>
+                    <li>On-spot cleaning: continuous tidying and trash removal during the event for a comfortable environment.</li>
+                    <li>After-party cleanup: thorough cleaning of the venue, including sweeping, mopping, and trash disposal.</li>
+                    <li>Dishwashing and utensil care: washing dishes, glassware, and utensils so you don't have to worry about the mess.</li>
+                    <li>Custom requests: let us know your special needs—our team is flexible and ready to help!</li>
+                </ul>
+                <p class="text-lg text-blue-800 mt-6">Let FastNew handle the work behind the scenes, so you can enjoy your event to the fullest. We make parties easier, cleaner, and more memorable for everyone involved.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-blue-900 text-white text-center mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 FastNew Cleaning Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
