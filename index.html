@@ -114,18 +114,23 @@
         <!-- Mobile Menu -->
         <div class="md:hidden hidden bg-white bg-opacity-90 absolute top-16 left-0 w-full rounded-b-lg shadow-lg z-50" id="mobile-menu">
             <div class="flex flex-col space-y-4 p-4">
-                <select name="" id="" class="text-blue-800 hover:text-blue-600 transition-colors">
-                    <option value="">Services</option>
-                    <option value="residential"><a href="./pages/housecleaning.html">House Cleaning</a></option>
-                    <option value="commercial"><a href="./pages/officecleaning.html">Office Cleaning</a></option>
-                    <option value="window"><a href="./pages/kitchen.html">Kitchen Cleaning</a></option>
-                    <option value="upholstery"><a href="./pages/window.html">Window Cleaning</a></option>
-                    <option value="deep"><a href="./pages/housecleaning.html">Room Cleaning Services</a></option>
-                    <option value="post-construction"><a href="./pages/deepcleaning.html">Deep Cleaning Services</a></option>
-                    <option value="post-construction"><a href="./pages/laundry.html">Laundry And Ironing</a></option>
-                    <option value="post-construction"><a href="./pages/party.html">Party Helpers/Cleaning</a></option>
-                    <option value="post-construction"><a href="./pages/babysitting.html">Babysitting</a></option>
-                </select>
+                <div class="relative">
+                    <button id="mobile-services-btn" class="w-full text-left text-blue-800 hover:text-blue-600 transition-colors px-2 py-1 rounded focus:outline-none flex items-center justify-between">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="mobile-services-dropdown" class="hidden absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg z-50 py-2 border border-blue-100">
+                        <a href="./pages/housecleaning.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">House Cleaning</a>
+                        <a href="./pages/officecleaning.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Office Cleaning</a>
+                        <a href="./pages/kitchen.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Kitchen Cleaning</a>
+                        <a href="./pages/window.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Window Cleaning</a>
+                        <a href="./pages/housecleaning.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Room Cleaning Services</a>
+                        <a href="./pages/deepcleaning.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Deep Cleaning Services</a>
+                        <a href="./pages/laundry.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Laundry And Ironing</a>
+                        <a href="./pages/party.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Party Helpers/Cleaning</a>
+                        <a href="./pages/babysitting.html" class="block px-4 py-2 text-blue-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Babysitting</a>
+                    </div>
+                </div>
                 <a href="#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
                 <a href="#testimonials" class="text-blue-800 hover:text-blue-600 transition-colors">Testimonials</a>
                 <a href="#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
@@ -391,5 +396,27 @@
 
 
     <script src="./scripts/navbar.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile services dropdown toggle
+        const mobileServicesBtn = document.getElementById('mobile-services-btn');
+        const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+        mobileServicesBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileServicesDropdown.classList.toggle('hidden');
+        });
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!mobileServicesBtn.contains(e.target) && !mobileServicesDropdown.contains(e.target)) {
+                mobileServicesDropdown.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
