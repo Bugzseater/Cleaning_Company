@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | FastNew Cleaning Services</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+        .navglass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navglass px-4 py-3">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="../index.html" class="text-2xl font-bold text-blue-600 flex items-center">
+                <span class="text-3xl mr-2">✨</span> Home
+            </a>
+        </div>
+    </nav>
+
+    <header class="pt-24 pb-8 px-4 md:pt-32 md:pb-12">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Book Your Cleaning Service</h1>
+            <p class="text-blue-700 text-lg mb-6">Fill in your details and we’ll get in touch to confirm your booking.</p>
+        </div>
+    </header>
+
+    <section class="py-8 px-4">
+        <div class="container mx-auto max-w-4xl"> <!-- Increased max-w-2xl to max-w-4xl for larger form on desktop -->
+            <form class="glass p-12 rounded-lg shadow-lg space-y-8"> <!-- Increased padding and spacing for a larger look -->
+                <h2 class="text-2xl font-bold text-blue-900 mb-4">Client Information</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Full Name *</label>
+                        <input type="text" required class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Mobile Number *</label>
+                        <input type="tel" required class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your mobile number">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Email Address *</label>
+                        <input type="email" required class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your email address">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Nationality</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Enter your nationality">
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Your Location</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Flat / Floor Number</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Flat or Floor Number">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Villa / Building Number</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Villa or Building Number">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Compound/Building Name</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Compound or Building Name">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Street</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Street">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Area</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Area">
+                    </div>
+                    <div>
+                        <label class="block text-blue-800 font-semibold mb-1">Nearest Landmark</label>
+                        <input type="text" class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Nearest Landmark">
+                    </div>
+                </div>
+
+                <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Required Services</h2>
+                <div class="mb-4">
+                    <label class="block text-blue-800 font-semibold mb-2">Please select service you want:</label>
+                    <select required class="w-full p-3 rounded border border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        <option value="">Select a service</option>
+                        <option>House Cleaning</option>
+                        <option>Office Cleaning</option>
+                        <option>Kitchen Cleaning</option>
+                        <option>Window Cleaning</option>
+                        <option>Room Cleaning Services</option>
+                        <option>Deep Cleaning Services</option>
+                        <option>Laundry And Ironing</option>
+                        <option>Party Helpers/Cleaning</option>
+                        <option>Babysitting</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-blue-800 font-semibold mb-2">Regular Service (weekly fixed day)</label>
+                    <div class="flex flex-wrap gap-3">
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Saturday"> <span class="ml-2">Saturday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Sunday"> <span class="ml-2">Sunday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Monday"> <span class="ml-2">Monday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Tuesday"> <span class="ml-2">Tuesday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Wednesday"> <span class="ml-2">Wednesday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Thursday"> <span class="ml-2">Thursday</span></label>
+                        <label class="inline-flex items-center"><input type="checkbox" class="form-checkbox text-blue-600" value="Friday"> <span class="ml-2">Friday</span></label>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-blue-800 font-semibold mb-2">Shifts</label>
+                    <div class="flex gap-6">
+                        <label class="inline-flex items-center"><input type="radio" name="shift" class="form-radio text-blue-600" value="AM" required> <span class="ml-2">AM</span></label>
+                        <label class="inline-flex items-center"><input type="radio" name="shift" class="form-radio text-blue-600" value="PM"> <span class="ml-2">PM</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-blue-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-800 transition-all">Submit Booking</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-8 bg-blue-900 text-white text-center mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 FastNew Cleaning Services. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
