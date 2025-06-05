@@ -60,6 +60,18 @@
         body::-webkit-scrollbar {
             display: none; /* Chrome, Safari, Opera */
         }
+                    @keyframes gradientBG {
+                0%, 100% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+            }
+            .animate-gradient {
+                background-size: 200% 200%;
+                animation: gradientBG 8s ease-in-out infinite;
+            }
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen">
@@ -98,7 +110,6 @@
                     </div>
                 </div>
                 <a href="#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
-                <a href="#testimonials" class="text-blue-800 hover:text-blue-600 transition-colors">Testimonials</a>
                 <a href="#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
                 <a href="#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
             </div>
@@ -132,7 +143,6 @@
                     </div>
                 </div>
                 <a href="#about" class="text-blue-800 hover:text-blue-600 transition-colors">About Us</a>
-                <a href="#testimonials" class="text-blue-800 hover:text-blue-600 transition-colors">Testimonials</a>
                 <a href="#pricing" class="text-blue-800 hover:text-blue-600 transition-colors">Pricing</a>
                 <a href="#contact" class="text-blue-800 hover:text-blue-600 transition-colors">Contact</a>
             </div>
@@ -140,7 +150,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-24 pb-16 px-4 md:pt-32 md:pb-24 relative">
+    <header class="pt-24 pb-16 px-4 md:pt-32 md:pb-24 relative overflow-hidden bg-gradient-to-br from-blue-400 via-purple-300 to-teal-300 animate-gradient">
         <div class="container mx-auto flex flex-col-reverse md:flex-row items-center">
             <div class="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 leading-tight mb-4 text-shadow">
@@ -162,7 +172,6 @@
                 <img src="https://cdn.prod.website-files.com/662a9a0b1860cf22db41bd69/662ff7377dec6027e008a4ac_Professional%20cleaning%20service%20(1).webp" alt="Cleaning Service" class="w-full max-w-md float">
             </div>
         </div>
-        
         <!-- Scrolling Wave -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden h-12">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
@@ -376,13 +385,13 @@
                     <span class="block">ZONE: 14</span>
                 </div>
                 <div class="flex space-x-4 mt-4">
-                    <a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="text-blue-700 hover:text-blue-900 transition">
+                    <a href="https://www.facebook.com/share/1HyKNbfriM/" target="_blank" aria-label="Facebook" class="text-blue-700 hover:text-blue-900 transition">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.632.771-1.632 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12"></path></svg>
                     </a>
-                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="text-blue-700 hover:text-blue-900 transition">
+                    <a href="https://www.instagram.com/fastnewhospitality?igsh=NTExMmJxcDdkMDZ4" target="_blank" aria-label="Instagram" class="text-blue-700 hover:text-blue-900 transition">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg>
                     </a>
-                    <a href="https://tiktok.com/" target="_blank" aria-label="TikTok" class="text-blue-700 hover:text-blue-900 transition">
+                    <a href="https://www.tiktok.com/@fastnew.hosptality?_t=ZS-8wgGMDK4Eio&_r=1" target="_blank" aria-label="TikTok" class="text-blue-700 hover:text-blue-900 transition">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21 8.306c-.638 0-1.262-.062-1.867-.183v6.44c0 3.486-2.83 6.337-6.316 6.437A6.375 6.375 0 0 1 6.5 14.625c0-3.523 2.852-6.375 6.375-6.375.09 0 .18.002.27.006v2.07a4.312 4.312 0 1 0 4.312 4.312V2h2.043c.001 3.47 2.815 6.284 6.285 6.306z"></path></svg>
                     </a>
                 </div>
@@ -410,10 +419,24 @@
             e.stopPropagation();
             mobileServicesDropdown.classList.toggle('hidden');
         });
-        // Close dropdown when clicking outside
+        // Close dropdown when clicking outside (mobile)
         window.addEventListener('click', (e) => {
             if (!mobileServicesBtn.contains(e.target) && !mobileServicesDropdown.contains(e.target)) {
                 mobileServicesDropdown.classList.add('hidden');
+            }
+        });
+
+        // Desktop services dropdown toggle
+        const desktopServicesBtn = document.getElementById('desktop-services-btn');
+        const desktopServicesDropdown = document.getElementById('desktop-services-dropdown');
+        desktopServicesBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            desktopServicesDropdown.classList.toggle('hidden');
+        });
+        // Close dropdown when clicking outside (desktop)
+        window.addEventListener('click', function(e) {
+            if (!desktopServicesBtn.contains(e.target) && !desktopServicesDropdown.contains(e.target)) {
+                desktopServicesDropdown.classList.add('hidden');
             }
         });
     </script>

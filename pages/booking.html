@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking | FastNew Cleaning Services</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .glass {
       background: rgba(255, 255, 255, 0.2);
@@ -51,7 +51,6 @@
           <input name="name" type="text" required placeholder="Full Name" class="w-full p-3 rounded border border-blue-200" />
           <input name="phone" type="tel" required placeholder="Mobile Number" class="w-full p-3 rounded border border-blue-200" />
           <input name="email" type="email" required placeholder="Email Address" class="w-full p-3 rounded border border-blue-200" />
-          <input name="nationality" type="text" placeholder="Nationality" class="w-full p-3 rounded border border-blue-200" />
         </div>
 
         <h2 class="text-2xl font-bold text-blue-900 mt-8 mb-4">Your Location</h2>
@@ -60,7 +59,7 @@
           <input name="building" type="text" placeholder="Villa / Building Number" class="w-full p-3 rounded border border-blue-200" />
           <input name="compound" type="text" placeholder="Compound / Building Name" class="w-full p-3 rounded border border-blue-200" />
           <input name="street" type="text" placeholder="Street" class="w-full p-3 rounded border border-blue-200" />
-          <input name="area" type="text" placeholder="Area" class="w-full p-3 rounded border border-blue-200" />
+          <input name="zone" type="text" placeholder="Zone" class="w-full p-3 rounded border border-blue-200" />
           <input name="landmark" type="text" placeholder="Nearest Landmark" class="w-full p-3 rounded border border-blue-200" />
         </div>
 
@@ -115,49 +114,41 @@
   <!-- Script to Handle Form -->
   <script>
   document.getElementById('bookingForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    const form = e.target;
-    const days = Array.from(form.querySelectorAll('input[name="days"]:checked')).map(cb => cb.value).join(', ');
+  const form = e.target;
+  const days = Array.from(form.querySelectorAll('input[name="days"]:checked')).map(cb => cb.value).join(', ');
 
-    const data = {
-      name: form.name.value,
-      phone: form.phone.value,
-      email: form.email.value,
-      nationality: form.nationality.value,
-      flat: form.flat.value,
-      building: form.building.value,
-      compound: form.compound.value,
-      street: form.street.value,
-      area: form.area.value,
-      landmark: form.landmark.value,
-      service: form.service.value,
-      days: days,
-      shift: form.shift.value
-    };
-
-    try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxvvvECT1qtbjolg-cosD_8-eYcI42i1Y5k-iLRQmO-07HAfmnZYlOU1y7K3xhFa3pX0Q/exec', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      const text = await response.text();
-      const json = JSON.parse(text);
-      if (json.status === "success") {
-        alert("Booking submitted!");
-        form.reset();
-      } else {
-        alert("Error: " + json.message);
-      }
-    } catch (err) {
-      alert("Submission failed. " + err.message);
-    }
+  // Replace entry IDs below with those from your pre-filled link!
+  const params = new URLSearchParams({
+    'entry.1321963764': form.name.value,         // Name
+    'entry.485281029': form.phone.value,        // Phone
+    'entry.730553656': form.email.value,        // Email
+    'entry.2143598397': form.flat.value,         // Flat
+    'entry.488207199': form.building.value,     // Building
+    'entry.1054475332': form.compound.value,     // Compound
+    'entry.209597272': form.street.value,       // Street
+    'entry.892064462': form.zone.value,         // Area
+    'entry.1874459606': form.landmark.value,     // Landmark
+    'entry.2131021401': form.service.value,      // Service
+    'entry.299429259': days,                    // Days
+    'entry.672698527': form.shift.value         // Shift
   });
-</script>
+
+  try {
+    await fetch('https://docs.google.com/forms/d/1QatqvsYVA51hT_omfa5uebNBoH2_uB6afQiJrU53oa0/formResponse?' + params.toString(), {
+      method: 'GET',
+      mode: 'no-cors'
+    });
+
+    alert("Booking submitted!");
+    form.reset();
+  } catch (err) {
+    alert("Submission failed. " + err.message);
+  }
+});
 
 
-
+  </script>
 </body>
 </html>
